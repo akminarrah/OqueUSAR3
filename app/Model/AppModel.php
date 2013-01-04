@@ -30,5 +30,18 @@ App::uses('Model', 'Model');
  *
  * @package       app.Model
  */
+
+App::uses('Constantes', 'Common');
+
 class AppModel extends Model {
+
+    protected $retorno;
+    
+    /**
+     * Este método encripta utilizando sha1 do cakephp
+     * @param type $str
+     */
+    public function encriptar($str){
+        return sha1($str);
+    }
 }

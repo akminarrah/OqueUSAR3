@@ -31,5 +31,20 @@ App::uses('Controller', 'Controller');
  * @package       app.Controller
  * @link http://book.cakephp.org/2.0/en/controllers.html#the-app-controller
  */
+
+App::uses('Constantes', 'Common');
+App::uses('Retorno', 'Common');
+
 class AppController extends Controller {
+
+    protected $retorno;
+
+    public $components = array('DebugKit.Toolbar');
+
+    public function __constructor() {
+        parent::__construct();
+        $this->retorno = new Retorno();
+    }
+    
+    
 }

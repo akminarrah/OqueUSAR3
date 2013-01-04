@@ -4,3 +4,4 @@ if (Configure::read('debug') == 0):
 endif;
 App::uses('Debugger', 'Utility');
 ?>
+teste
