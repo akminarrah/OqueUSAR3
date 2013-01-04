@@ -1,0 +1,5 @@
+Base de dados OqueUsar
+Endpoint: elefante.cwiazuic6rxz.sa-east-1.rds.amazonaws.com
+Db instance identifier: Elefante
+Master UserName: dumbo
+Master password: oqq1w2e301
