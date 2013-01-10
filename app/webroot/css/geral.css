@@ -1,0 +1,177 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* \\\\\ GERAL ///// */
+
+body{background:/*url(../img/base/bg_widget.png)*/ #E1F1E7 fixed;/*background-color:#DFF7FF;*/background-color:none;margin:0px;font:normal 12px Tahoma, Geneva, sans-serif, "Trebuchet MS";color:#333;}
+
+#banner{background:#FFF;height:auto;width:160px;float:left;margin:10px 0 0 0;}
+
+#cont_secao{background:#FFF;min-height:450px;;width:818px;float:left;border:solid 1px #6EC7C4;margin:10px;position:relative;}
+#cont_secaoUsu{background:#FFF;height:auto;width:822px;float:left;padding:10px 5px 10px 17px;position:relative;}
+/*hack IE*/html>body #cont_secaoUsu{width:800px;padding:10px;}
+
+#cont_lista{background:#FFF;height:auto;width:800px;float:left;border:solid 1px #6EC7C4;margin:10px;padding:10px;position:relative;}
+/*hack IE*/html>body #cont_lista{width:810px;padding:10px 0 0 8px;}
+
+#nome_secao{margin:10px;}
+#nome_secao h3{display:inline;font-weight:lighter;color:#666;}
+
+#pagina{height:15px;width:800px;float:right;margin:10px;text-align:right;}
+.pagina, .voltar{width:auto;float:right;margin:5px;text-align:right}
+
+.sB{border-color:#777 transparent;border-style:solid;border-width:5px 5px 0 5px;height:0;width:0;position:absolute;top:10px;right:10px;}
+.sC{border-color:#777 transparent;border-style:solid;border-width:5px 0 5px 5px;height:0;width:0;position:absolute;top:10px;right:10px;}
+
+.bt_acao{height:auto;width:auto;float:left;margin:0 5px 0 0px;padding:5px 15px;text-align:center;cursor:pointer;position:relative;}
+
+.campos{background-color:#FFF;height:20px;border:solid 1px #999;padding:0px;font-family:Verdana, Geneva, sans-serif;font-size:12px;color:#666;}
+.campos_descreve{height:200px;width:440px;}
+.campos_cadastro{width:440px;margin:0;}
+.campos_cadastro2{height:20px;width:300px;margin:0;}
+
+.c_dados{height:auto;width:450px;float:left;padding:10px;}
+.c_dados h4{margin:5px 0;color:#666;}
+.c_dados h4 strong{color:#0267b1;}
+.c_dados label{margin:0 5px 0 0;}
+
+#img_ilustra{position:absolute;bottom:0;right:0;overflow:hidden;}
+
+.top5{margin-top:5px;}
+.top10{margin-top:10px;}
+.top25{margin-top:25px;}
+.btn15{margin-bottom:15px;}
+.lft10{margin-left:10px;}
+
+#email_confirma h2, #texto_confirma h2{background:#F9F9F9;height:auto;padding:20px;text-align:center;margin:100px 0 0 0;}
+
+#prw_img_prod{background:#F5F5F5;height:auto;width:450px;margin:20px 10px 10px 10px;float:left;line-height:normal;}
+
+.HWaL{height:auto;width:auto;float:left;}
+.HWaR{height:auto;width:auto;float:right;}
+.HW100L{height:auto;width:100%;float:left;}
+
+/*////// imputs \\\\\\\ */
+
+a img{border:none;}
+
+input[type="radio"]{margin:0px 5px;}
+
+li{display:inline;list-style-type:none;}
+.lista li{display:block;}
+
+select.campos_cadastro2{height:22px;}
+
+/*////// tags \\\\\\\ */
+
+
+#total{background-color:none;height:100%;padding-top:50px; /*mesma altura do header*/}
+
+#header{background:#FFF;height:105px;width:100%;position:fixed;top:0;left:0;/*border-bottom:solid 3px #537473;*/z-index:1000000;}
+.meio{background:#FFF;width:1008px;margin:0 auto;}
+#header .meio/*, #contem_secao .meio, #logo .meio*/{position:relative;}
+
+#busca{background:none;height:50px;width:350px;float:left;margin:0 0 0 5px;padding:8px 0 0 0;}
+.busca_campo{background-color:#E1F1E7;height:23px;width:200px;float:left;border:solid 1px #6EC7C4;margin:2px 0 0 5px;padding:0px 5px;font-style:italic;color:#666;}
+#lupa{background:#537473;height:15px;width:15px;float:left;border:solid 1px #FFF;margin:1px 5px;padding:5px;cursor:pointer;}
+
+#logo{background:none;height:60px;width:1008px;}
+#logo .meio{width:170px;/*mesma largura da imagem do logo*/margin:0 auto;padding:7px 0 0 0;border:none;cursor:pointer;}
+
+#menuUsu{background-color:none;height:auto;width:auto;float:right;margin:25px 10px 0 0;text-align:center;cursor:pointer;}
+#mU_avatar{background:none;height:25px;width:25px;float:left;border:solid 1px #FFF;}
+#mU_nome{background:#CCE7D4; /*#537473;*/height:20px;width:auto;float:left;border:solid 1px #FFF;margin:0 0 0 5px;padding:5px 5px 0;}
+
+#menuSite{background:#E1F1E7;height:20px;width:100%;float:left;padding:8px 0 2px 0;text-align:center;}
+
+#menuSite a{background-color:none;text-decoration:none;color:#0267b1;}
+#menuSite a:link{text-decoration:none;color:#0267b1;}
+#menuSite a:visited{text-decoration:none;color:#0267b1;}
+#menuSite a:hover{background-color:none;text-decoration:none;color:#000;}
+#menuSite a:active{text-decoration:none;color:#0267b1;}
+#menuSite a img{border:none;}
+
+.topoBtCA, .topo_usu{
+	/*background:url(../img/base/bg_bt3.png);*/
+	height:10px;
+	width:auto;
+	float:left;
+	text-align:center;
+	margin:0 0 0 10px;
+	padding:5px 15px 10px 15px;
+	color:#FFF;
+	text-decoration:none;
+	font-weight:bolder;
+}
+
+.topoBtAjuda{
+	width:170px;
+	margin:0 10px;
+	padding:5px 0 10px 0;
+	color:#333;
+	font-weight:normal;
+	text-align:center;
+}
+
+#tagsSite{
+	background:#6EC7C4;
+	height:15px;
+	width:100%;
+	text-align:center;
+}
+
+#secao{
+	background-color:#FFF;
+	height:auto;
+	position:relative;
+	float:left;
+	overflow:hidden;
+	border-left:solid 1px #6EC7C4;
+	border-right:solid 1px #6EC7C4;
+	margin:0 10px;
+	padding:10px;
+}
+
+.L{height:auto;width:100%;float:left;position:relative;}
+.top5{margin-top:5px;}
+.top10{margin-top:10px;}
+.top25{margin-top:25px;}
+
+.middle{vertical-align:middle;}
+.HWautoLeft{height:auto;width:auto;float:left;}
+.HWautoRight{height:auto;width:auto;float:right;}
+
+/* -------------- ABAS -------------- */
+
+#menuuser{height:1%;width:800px;display:table;margin-bottom:10px;border-bottom:1px solid #999;margin:15px 0 0 10px;}
+#menuuser, #menuuser a{font-weight:bold;}
+#menuuser ul, #menuuser li{margin:0;padding:0;}
+#menuuser ul li{float:left;border:1px solid #999;border-bottom:none;margin: 0 3px -2px 0;list-style:none;}
+#menuuser ul li a{float:left;display:block;padding:8px 20px;color:#999;text-decoration:none;cursor:pointer;}
+#menuuser ul li.on a, #menuuser ul li a:hover{background-color:#FFF;color:#000;}
+#menuuser ul li.on{border-bottom:1px solid #FFFFFF;margin-bottom:-1px;}
+#menuuser li.ordem {float:right;border-color:#fff;}
+
+/* -------------- BACKGROUNDS -------------- */
+
+.bgOpcoes{background:url(http://www.oqueusar.com.br/img/base/bg_bt.png) #EBEBEB;border:solid 1px #888;color:#333;}
+.bgCE{background-color:#EBEBEB;border:solid 1px #666;color:#333;}
+.bgGen{background:url(http://www.oqueusar.com.br/img/base/bg_bt.png) #CF9;border:solid 1px #888;color:#0267B1;}
+.bgSeguir{background:url(http://www.oqueusar.com.br/img/base/bg_bt.png) #0CF;border:solid 1px #888;color:#0267B1;}
+
+/* -------------- RODAPE -------------- */
+
+#rodape{background:#e1f1e7;height:auto;width:970px;float:left;text-align:center;border-left:solid 0px #6EC7C4;border-right:solid 0px #6EC7C4;margin:0 0 0 10px;padding:15px 0 0 0;position:relative;overflow:hidden;}
+
+#rodape a{background-color:none;text-decoration:none;color:inherit;}
+#rodape a:link{text-decoration:none;color:#666;}
+#rodape a:visited{text-decoration:none;color:#666;}
+#rodape a:hover{background-color:none;text-decoration:none;color:#000;}
+#rodape a:active{text-decoration:none;color:#666;}
+#rodape a img{border:none;}
+#rodape h4{line-height:70%;font-weight:normal;}
+
+.rodape_colunas{background-color:none/*#D2FFFA*/;height:180px;min-width:153px;float:left;margin:0 0 0 15px;padding:0 15px;}
+#logo_rodape{background:none;margin:0 15px;border:none;padding:15px 0 0 5px;}
+#info_cosmeticos, #redes_acompanhe{line-height:200%;text-align:left;}
+.ico_rodape{margin:0 5px 0 0;}
