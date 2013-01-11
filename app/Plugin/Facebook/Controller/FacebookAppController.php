@@ -20,8 +20,6 @@
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
 
-App::uses('Controller', 'Controller');
-
 /**
  * Application Controller
  *
@@ -32,22 +30,27 @@ App::uses('Controller', 'Controller');
  * @link http://book.cakephp.org/2.0/en/controllers.html#the-app-controller
  */
 
-App::uses('Constantes', 'Common');
-App::uses('Retorno', 'Common');
+App::uses('Controller', 'Controller');
+App::uses('AppController', 'Controller');
+App::uses('Facebook', 'Facebook.Lib');
 
-class AppController extends Controller {
+class FacebookAppController extends AppController {
 
-    protected $retorno;
-
-    public $components = array('DebugKit.Toolbar');
-
-    public function __constructor() {
-        parent::__construct();
-        
-        $this->log('AppController::contruct');
-        $this->log($this);
-        
-        $this->retorno = new Retorno();
+    protected $Fb;
+    protected $faceConfig = array('appId' => '156316307761037', 'secret' => '85ba1426222cf30fe2bb707e7923346f', 'fileUpload' => false);
+    //public $components = array('DebugKit.Toolbar');
+    
+    public function beforeFilter() {
+        parent::beforeFilter();
+        $this->log('FacebookAppController::constructor');
+        //$this->Components->unload('DebugKit.Toolbar');
+        $this->log('Facebook version: ');
+        $this->log(Facebook::VERSION);
+        $this->log('FacebookAppController::contructor');
+        if (!$this->Fb) {
+            $this->Fb = new Facebook($this->faceConfig);
+        }
+        $this->log('FacebookAppController::contructor - ok');
     }
     
     

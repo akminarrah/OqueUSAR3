@@ -1,7 +1,6 @@
 <?php echo $this->Html->css('home'); ?>
 <div class="meio">
     <div id="secao">
-        <div id="col_esq"><img src="file:///C:/wamp/www/oqueusar3/app/webroot/img/base/lateralEsq_img001.png" title="" alt=""/></div>
 
         <div id="col_centro">
 
@@ -19,7 +18,7 @@
                         <strong><a href="/usuario/cadastro">cadastre-se</a></strong>
                     </div>
                     <div class="chamaBtCA bgAcessar txt_16_FFF">
-                        <strong><a href="/usuario/fazer_login">acesse</a></strong>
+                        <strong><a href="/Facebook.Autenticar/autenticar">acesse via facebook</a></strong>
                     </div>
                 </div>
             </div>

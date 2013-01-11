@@ -1,12 +1,12 @@
 /* \\\\\ HOME ///// */
 
-#secao{background-color:#FFF;height:auto;width:958px;position:relative;float:left;overflow:hidden;border-width:0 1px 1px 1px;border-style:solid;border-color:#6EC7C4;margin:0 10px;padding:0 10px;}
+#secao{background-color:#FFF;height:auto;width:1008px;position:relative;float:left;overflow:hidden;border-width:0 1px 1px 1px;border-style:solid;border-color:#6EC7C4;margin:0px;padding:0px;}
 
 ul#DIR, ul#ESQ{width:600px;margin:0;padding:0;}
 ul#ESQ{width:358px;}
 
 #banner{height:170px;width:600px;float:left;margin:15px 0 0 0;}
-#col_centro{background:none;height:auto;width:905px;float:left;margin:-10px 0 0 10px;}
+#col_centro{background:none;height:auto;width:905px;float:left;margin:55px 0 0 10px;}
 
 #chama_home{background:#E1F1E7;height:auto;width:900px;float:left;border:dashed 1px #999;margin:15px 0 0 0;}
 #chama_home2{background:#F0FAF4;height:auto;width:324px;float:left;border:dashed 1px #999;margin:15px 0 0 10px;padding:10px;}
@@ -18,7 +18,7 @@ ul#ESQ{width:358px;}
 .busca_homeCampo{background-color:#E1F1E7;height:23px;width:510px;float:left;border:solid 1px #6EC7C4;margin:2px 0 0 0;padding:0 5px;font-style:italic;color:#666;}
 #busca_homeLupa{background:#537473;height:15px;width:15px;float:left;border:solid 1px #FFF;margin:1px 5px;padding:5px;cursor:pointer;}
 
-.chamaBtCA{height:20px;width:100px;float:left;text-align:center;margin:10px 0 5px 10px;padding:12px 15px 10px 15px;}
+.chamaBtCA{height:20px;width:100px;float:left;text-align:center;margin:4px 0 10px 10px;padding:12px 15px 10px 15px;}
 
 .chamaBtCA a{background-color:none;text-decoration:none;color:#FFF;}
 .chamaBtCA a:link{text-decoration:none;color:#FFF;}

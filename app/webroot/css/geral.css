@@ -67,7 +67,7 @@ select.campos_cadastro2{height:22px;}
 
 #total{background-color:none;height:100%;padding-top:50px; /*mesma altura do header*/}
 
-#header{background:#FFF;height:105px;width:100%;position:fixed;top:0;left:0;/*border-bottom:solid 3px #537473;*/z-index:1000000;}
+#header{background:#FFF;height:105px;width:100%;position:fixed;top:0;left:0;/*border-bottom:solid 3px #537473;*/z-index:1000;}
 .meio{background:#FFF;width:1008px;margin:0 auto;}
 #header .meio/*, #contem_secao .meio, #logo .meio*/{position:relative;}
 

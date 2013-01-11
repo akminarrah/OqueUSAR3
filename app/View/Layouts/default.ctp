@@ -15,7 +15,7 @@
  * @since         CakePHP(tm) v 0.10.0.1076
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
-$cakeDescription = __d('OqueUsar uma nova maneira de ficar por dentro do mundo dos cosméticos');
+$cakeDescription = 'OqueUsar uma nova maneira de ficar por dentro do mundo dos cosméticos';
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -80,7 +80,7 @@ $cakeDescription = __d('OqueUsar uma nova maneira de ficar por dentro do mundo d
             </div><!--fecha meio-->
 
             </div><!--fecha contem_secao-->
-
+            <div class="meio">
                 <div id="rodape" class="linhas">
                     <div id="logo_rodape" class="rodape_colunas">
                         <?php echo $this->Html->image('base/logo_OqueUSAR_pqnoPB.png', array('alt'=>'logotpo', 'title'=>'OqueUsar')); ?>
@@ -124,8 +124,7 @@ $cakeDescription = __d('OqueUsar uma nova maneira de ficar por dentro do mundo d
                         <h4>área restrita</h4>
                     </div>
                 </div>
-
-
+            </div>
         </div><!--fecha total-->
             
     </body>

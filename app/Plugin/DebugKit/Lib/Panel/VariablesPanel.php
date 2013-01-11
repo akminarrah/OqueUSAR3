@@ -16,7 +16,7 @@ class VariablesPanel extends DebugPanel {
  * @return array
  */
 	public function beforeRender(Controller $controller) {
-		return array_merge($controller->viewVars, array('$request->data' => $controller->request->data));
+            return array_merge($controller->viewVars, array('$request->data' => $controller->request->data));
 	}
 
 }

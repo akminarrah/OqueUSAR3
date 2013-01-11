@@ -1,25 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
-    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="1">
-        <file>
-            <url>View/Layouts/default.ctp</url>
-            <bookmark id="1">
-                <name/>
-                <line>55</line>
-                <key/>
-            </bookmark>
-        </file>
-    </editor-bookmarks>
-    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/1">
-        <file>file:/C:/wamp/www/oqueusar_aws/app/View/Layouts/default.ctp</file>
-        <file>file:/C:/wamp/www/oqueusar_aws/app/View/Layouts/embreve.ctp</file>
-        <file>file:/C:/wamp/www/oqueusar_aws/app/Controller/PagesController.php</file>
-        <file>file:/C:/wamp/www/oqueusar_aws/app/Config/routes.php</file>
-        <file>file:/C:/wamp/www/oqueusar_aws/app/View/Inicio/index.ctp</file>
-        <file>file:/C:/wamp/www/oqueusar_aws/app/Controller/InicioController.php</file>
-        <file>file:/C:/wamp/www/oqueusar_aws/app/Model/Usuario.php</file>
-        <file>file:/C:/wamp/www/oqueusar_aws/app/Controller/UsuarioController.php</file>
-        <file>file:/C:/wamp/www/oqueusar_aws/app/webroot/css/geral.css</file>
-        <file>file:/C:/wamp/www/oqueusar_aws/app/webroot/css/home.css</file>
-    </open-files>
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
 </project-private>
