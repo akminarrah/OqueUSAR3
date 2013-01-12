@@ -1,4 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/1">
+        <file>file:/C:/wamp/www/oqueusar_aws/app/Plugin/Facebook/View/Autenticar/autenticar.ctp</file>
+        <file>file:/C:/wamp/www/oqueusar_aws/app/Controller/PagesController.php</file>
+        <file>file:/C:/wamp/www/oqueusar_aws/app/Plugin/Facebook/Controller/Component/FacebookComponent.php</file>
+        <file>file:/C:/wamp/www/oqueusar_aws/app/Plugin/Facebook/Controller/AutenticarController.php</file>
+        <file>file:/C:/wamp/www/oqueusar_aws/app/Plugin/Facebook/Controller/FacebookAppController.php</file>
+        <file>file:/C:/wamp/www/oqueusar_aws/app/View/Inicio/index.ctp</file>
+        <file>file:/C:/wamp/www/oqueusar_aws/app/Controller/AppController.php</file>
+        <file>file:/C:/wamp/www/oqueusar_aws/app/Controller/InicioController.php</file>
+        <file>file:/C:/wamp/www/oqueusar_aws/app/Plugin/DebugKit/Controller/Component/ToolbarComponent.php</file>
+        <file>file:/C:/wamp/www/oqueusar_aws/app/Plugin/DebugKit/Controller/ToolbarAccessController.php</file>
+        <file>file:/C:/wamp/www/oqueusar_aws/app/Plugin/DebugKit/Lib/Panel/VariablesPanel.php</file>
+        <file>file:/C:/wamp/www/oqueusar_aws/app/Plugin/DebugKit/Controller/DebugKitAppController.php</file>
+        <file>file:/C:/wamp/www/oqueusar_aws/app/Plugin/Teste/Controller/UrlController.php</file>
+        <file>file:/C:/wamp/www/oqueusar_aws/app/Model/Usuario.php</file>
+    </open-files>
 </project-private>

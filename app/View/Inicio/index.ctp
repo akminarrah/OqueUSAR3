@@ -18,7 +18,7 @@
                         <strong><a href="/usuario/cadastro">cadastre-se</a></strong>
                     </div>
                     <div class="chamaBtCA bgAcessar txt_16_FFF">
-                        <strong><a href="/Facebook.Autenticar/autenticar">acesse via facebook</a></strong>
+                        <strong><a href="/facebook/autenticar/autenticar">acesse via facebook</a></strong>
                     </div>
                 </div>
             </div>

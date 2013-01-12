@@ -19,11 +19,16 @@ class AutenticarController extends FacebookAppController {
         if (isset($this->request->query['code'])) {
             $this->log('Facebook.Autenticar::check - code: ' . $this->request->query['code']);
 
+            //Verificar se já as contas já estão associadas
+            //Armazenar o token
+            
+            
             /*
              * Verifica se já está logado.
              * Neste caso o usuário estará associando a conta do facebook dele
              * à conta do QL
              */
+            $this->log('Facebook.Autenticar::check - recuperando os do FB');
             $data = $this->getFacebookData();
             $this->log($data);
             /*if (parent::logado()) {
@@ -57,24 +62,22 @@ class AutenticarController extends FacebookAppController {
     //Usuário já está logado no facebook e vai efetuar login no QL
     public function autenticar() {
         $this->log('Facebook.Autenticar::autenticar');
-        $params = array(
-            'scope' => 'user_about_me, email, user_interests, read_stream, publish_stream',
-            'redirect_uri' => 'http://ec2-54-232-98-26.sa-east-1.compute.amazonaws.com/facebook/autenticar/check?' . (isset($this->request->query['origem']) ? 'origem=' . $this->request->query['origem'] : '')
-        );
 
         $user = $this->Fb->getUser();
         if (!empty($user)) {
-            //$usuario = $this->Usuario->getUsuarioByUid($user);
-
-            if (isset($this->request->query['origem'])) {
-                if ($this->request->query['origem'] == 'amigos') {
-                    $this->redirect('/amigos');
-                }
-            }
             $this->log($user);
+            $this->log('Facebook.Autenticar::autenticar');
+            $dados = $this->getFacebookData();
             //parent::criarSessao($usuario, 1);
             //parent::redirectHome();
+            $data['img']['square'] = 'http://graph.facebook.com/'.$dados['username'].'/picture?type=square';
+            $data['img']['large'] = 'http://graph.facebook.com/'.$dados['username'].'/picture?type=large';
+            $this->set('dados', $data);
         } else {
+            $params = array(
+                'scope' => 'user_about_me, email, read_stream, user_birthday',
+                'redirect_uri' => 'http://ec2-54-232-98-26.sa-east-1.compute.amazonaws.com/facebook/autenticar/check?' . (isset($this->request->query['origem']) ? 'origem=' . $this->request->query['origem'] : '')
+            );
             $urlLogin = $this->Fb->getLoginUrl($params);
             $this->set('redirect', $urlLogin);
             $this->render('redirect');
@@ -266,21 +269,32 @@ class AutenticarController extends FacebookAppController {
         return $this->retorno;
     }
 
+    /**
+     * Extrai as informações retornadas do FB
+     * @return array
+     */
     private function getFacebookData() {
+        $this->log('Facebook.AutenticarController::getFacebookData');
         $user = $this->Fb->getUser();
         $data = array();
+        $this->log('Facebook.AutenticarController::getFacebookData - usuario do FB');
+        $this->log($user);
         //pr($user);
         if ($user) {
+            $this->log('Facebook.AutenticarController::getFacebookData - recuperando dados do FB');
             //recuperando as informações do usuário
             $user_info = $this->Fb->api('/me');
 
+            $this->log('Facebook.AutenticarController::getFacebookData - dados do FB');
+            $this->log($user_info);
             //dados de cadstro do usuario
-            $data['appID'] = Constantes::$FACEBOOK_APP_ID;
+            //$data['appID'] = Constantes::$FACEBOOK_APP_ID;
             $data['email'] = $user_info['email'];
             $data['nome'] = $user_info['name'];
             //dados de cadastro do aplicativo
             $data['access_token'] = $this->Fb->getAccessToken();
-            $data['uid'] = $user_info['id'];
+            $data['fbid'] = $user_info['id'];
+            $data['username'] = $user_info['username'];
         }
         return $data;
     }
