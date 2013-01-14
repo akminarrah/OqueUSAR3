@@ -9,7 +9,7 @@ App::uses('FacebookAppController', 'Facebook.Controller');
 
 class AutenticarController extends FacebookAppController {
 
-    var $uses = array();
+    var $uses = array('Facebook.Facebook', 'Usuario');
 
     /**
      * Este método é o callback do login do face 
@@ -19,34 +19,69 @@ class AutenticarController extends FacebookAppController {
         if (isset($this->request->query['code'])) {
             $this->log('Facebook.Autenticar::check - code: ' . $this->request->query['code']);
 
-            //Verificar se já as contas já estão associadas
-            //Armazenar o token
-            
-            
+            $this->log('Facebook.Autenticar::check - recuperando os dados do FB');
+            $data = $this->getFacebookData();
+            $this->log($data);
+            if (!empty($data)) {
+                //Verificar se as contas já estão associadas
+                $fb_dados = $this->Facebook->pesquisarAccessToken($data['access_token']);
+                if(!empty($fb_dados)){
+                    //esses dados ainda não estão na base [novo usuário]
+                    $usuario_temp['Usuario'] = $fb_dados;
+                    $cadastroFacebook = true;
+                    if($this->Usuario->validarDadosCadastro($usuario_temp, $cadastroFacebook)){
+                        $retorno_usuario = $this->Usuario->salvar($usuario_temp, $cadastroFacebook);
+                        
+                        if($retorno_usuario->tipo == Constantes::$TIPO_SUCESSO){
+                            $data['usuario_id'] = $retorno_usuario->mensagem['Usuario']['id'];
+                            $retorno_facebook = $this->Facebook->salvar($data);
+                        }else{
+                            
+                        }
+
+                        if($retorno_usuario->tipo == Constantes::$TIPO_SUCESSO && $retorno_facebook->tipo == Constantes::$TIPO_SUCESSO){
+                            $this->retorno->tipo == Constantes::$TIPO_SUCESSO;
+                            //criar a sessão do usuário 
+                            //lugar em comum
+                        }
+                    }else{
+                        
+                    }
+                    /*
+                     * 1. cadastrar usuário
+                     * 2. efetuar login do usuário [criar sessão]
+                     * 3. redirecionar para a tela depois do cadastro
+                     */
+                }else{
+                    //esses dados já estão na base [login de usuário]
+                    /*
+                     * 1. efetuar login do usuário [criar sessão]
+                     * 2. redirecionar para o perfil do usuário
+                     */
+                }
+            }
+
             /*
              * Verifica se já está logado.
              * Neste caso o usuário estará associando a conta do facebook dele
              * à conta do QL
              */
-            $this->log('Facebook.Autenticar::check - recuperando os do FB');
-            $data = $this->getFacebookData();
-            $this->log($data);
-            /*if (parent::logado()) {
-                $this->retorno = $this->associaContaFacebook($data);
-            } else {
-                try{
-                //$this->retorno = $this->login();
-                $this->retorno = $this->getFacebookData();
-                }catch(Exception $e){
-                    pr($e->getMessage());
-                }
-                if ($this->retorno->tipo == Constantes::$TIPO_SUCESSO) {
-                    $this->log('Facebook.Autenticar::check - Dados do facebook');
-                    $this->log($this->retorno);
-                    //parent::criarSessao($this->retorno->mensagem, 1);
-                }
-            }*/
-            
+            /* if (parent::logado()) {
+              $this->retorno = $this->associaContaFacebook($data);
+              } else {
+              try{
+              //$this->retorno = $this->login();
+              $this->retorno = $this->getFacebookData();
+              }catch(Exception $e){
+              pr($e->getMessage());
+              }
+              if ($this->retorno->tipo == Constantes::$TIPO_SUCESSO) {
+              $this->log('Facebook.Autenticar::check - Dados do facebook');
+              $this->log($this->retorno);
+              //parent::criarSessao($this->retorno->mensagem, 1);
+              }
+              } */
+
 //            if (isset($this->request->query['origem'])) {
 //                if ($this->request->query['origem'] == 'amigos') {
 //                    $this->redirect('/amigos');
@@ -70,15 +105,17 @@ class AutenticarController extends FacebookAppController {
             $dados = $this->getFacebookData();
             //parent::criarSessao($usuario, 1);
             //parent::redirectHome();
-            $data['img']['square'] = 'http://graph.facebook.com/'.$dados['username'].'/picture?type=square';
-            $data['img']['large'] = 'http://graph.facebook.com/'.$dados['username'].'/picture?type=large';
+            $data['img']['square'] = 'http://graph.facebook.com/' . $dados['username'] . '/picture?type=square';
+            $data['img']['large'] = 'http://graph.facebook.com/' . $dados['username'] . '/picture?type=large';
             $this->set('dados', $data);
         } else {
             $params = array(
-                'scope' => 'user_about_me, email, read_stream, user_birthday',
+                'scope' => 'user_about_me, user_location, email, read_stream, user_birthday',
                 'redirect_uri' => 'http://ec2-54-232-98-26.sa-east-1.compute.amazonaws.com/facebook/autenticar/check?' . (isset($this->request->query['origem']) ? 'origem=' . $this->request->query['origem'] : '')
             );
             $urlLogin = $this->Fb->getLoginUrl($params);
+            $urlLogin = $urlLogin . '&fields=[{"name":"apelido","description":"Apelido","type":"text"}]';
+            $this->log('Facebook.Autenticar::autenticar - url login: ' . $urlLogin);
             $this->set('redirect', $urlLogin);
             $this->render('redirect');
         }
@@ -113,7 +150,7 @@ class AutenticarController extends FacebookAppController {
             //pr($temp);
             $dados['Usuario']['id'] = $temp['Usuario']['id'];
 
-            
+
 
             //pr($listaConvites);
 
@@ -141,19 +178,19 @@ class AutenticarController extends FacebookAppController {
         parent::redirectIndex();
     }
 
-    public function enviarConvite(){
+    public function enviarConvite() {
         $usuario = parent::recuperaSessao();
         $dados = array();
         if (parent::check($this->request->query, 'uid')) {
             $dados = $this->request->query;
             $dados['Usuario']['id'] = $usuario['Usuario']['id'];
             $dados['uid_convidado'] = $this->request->query['uid'];
-            
-            if($this->ConviteUsuarioFacebook->verificarConviteExistente($dados['Usuario']['id'], $dados['uid_convidado']) == 0){
+
+            if ($this->ConviteUsuarioFacebook->verificarConviteExistente($dados['Usuario']['id'], $dados['uid_convidado']) == 0) {
                 $this->retorno = $this->ConviteUsuarioFacebook->salvarConvite($dados);
                 //enviando convite para o facebook
                 $ret_obj = $this->Fb->api('/' . $dados['uid_convidado'] . '/feed', 'POST', array('message' => Constantes::$TEXTO_CONVITE_FACEBOOK));
-            }else{
+            } else {
                 $this->retorno->tipo = Constantes::$TIPO_ERRO;
                 $this->retorno->mensagem = "Você já convidou esta pessoa!";
             }
@@ -163,7 +200,7 @@ class AutenticarController extends FacebookAppController {
         }
         $this->redirect('/amigos');
     }
-    
+
     private function convidar($dados) {
         //Verificando se o amigo já recebeu convite
         if (!array_key_exists($amigo, $listaConvites)) {
@@ -275,12 +312,12 @@ class AutenticarController extends FacebookAppController {
      */
     private function getFacebookData() {
         $this->log('Facebook.AutenticarController::getFacebookData');
-        $user = $this->Fb->getUser();
+        $user_info = $this->Fb->getUser();
         $data = array();
         $this->log('Facebook.AutenticarController::getFacebookData - usuario do FB');
-        $this->log($user);
+        $this->log($user_info);
         //pr($user);
-        if ($user) {
+        if ($user_info) {
             $this->log('Facebook.AutenticarController::getFacebookData - recuperando dados do FB');
             //recuperando as informações do usuário
             $user_info = $this->Fb->api('/me');
@@ -288,13 +325,18 @@ class AutenticarController extends FacebookAppController {
             $this->log('Facebook.AutenticarController::getFacebookData - dados do FB');
             $this->log($user_info);
             //dados de cadstro do usuario
-            //$data['appID'] = Constantes::$FACEBOOK_APP_ID;
             $data['email'] = $user_info['email'];
             $data['nome'] = $user_info['name'];
-            //dados de cadastro do aplicativo
             $data['access_token'] = $this->Fb->getAccessToken();
-            $data['fbid'] = $user_info['id'];
+            $data['fb_id'] = $user_info['id'];
             $data['username'] = $user_info['username'];
+            $data['nascimento'] = $user_info['birthday'];
+            $data['link'] = $user_info['link'];
+            $data['apelido'] = $user_info['first_name'];
+            $data['genero'] = $user_info['gender'];
+            $data['locale'] = $user_info['locale'];
+        } else {
+            $this->log('ERROR - erro ao efetuar login pelo facebook');
         }
         return $data;
     }

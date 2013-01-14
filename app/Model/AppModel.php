@@ -44,4 +44,50 @@ class AppModel extends Model {
     public function encriptar($str){
         return sha1($str);
     }
+    
+    public function formatDataSql($data){
+        return date(Constantes::$DATETIME_FORMAT_TO_DATABASE, strtotime($data));
+    }
+    
+    public function formatData($data, $format){
+        return date($format, strtotime($data));
+    }
+    
+    public function dataSqlFormat(){
+        return date(Constantes::$DATETIME_FORMAT_TO_DATABASE);
+    }
+
+    public function validarFormatoDataBr($data){
+        // VALIDAR DATA NO FORMATO DD/MM/AAAA
+        return eregi("^[0-9]{2}/[0-9]{2}/[0-9]{4}$", $data);
+    }
+    
+    public function validarDataMenorAtual($data){
+        $atual = date(Constantes::$SIMPLE_DATE_FORMAT_TO_VIEW);
+        $dtAtual = strtotime($atual);
+        $compData = strtotime($data);
+        if(($dtAtual - $compData) < 0){
+            return false;
+        }
+        return true;
+    }
+    
+    public function queryDataFormatToView($nomeCampo, $formato = ""){
+        $formato = (empty($formato) ? "'%d/%m/%Y %H:%i'" : $formato);
+        return "DATE_FORMAT(".$nomeCampo . ", ".$formato.")";
+    }
+    
+    public function executarConsultaExterna($query, $model) {
+        $defCon = ConnectionManager::getDataSource('default');
+        $con = mysql_connect($defCon->config['host'], $defCon->config['login'], $defCon->config['password']);
+        mysql_set_charset('utf8', $con);
+        mysql_select_db($defCon->config['database']);
+        $result = mysql_query($query);
+        $return = array();
+        while ($row = mysql_fetch_object($result)) {
+            $return[] = array($model => $row);
+        }
+        mysql_close();
+        return $return;
+    }
 }
