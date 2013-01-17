@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="file:///C:/wamp/www/oqueusar3/app/webroot/css/geral.css" type="text/css" />
+<link rel="stylesheet" href="file:///C:/wamp/www/oqueusar3/app/webroot/css/perfil.css" type="text/css" />
+<link rel="stylesheet" href="file:///C:/wamp/www/oqueusar3/app/webroot/css/fontes.css" type="text/css" />
+
+<div id="cont_secao" style="height:450px;">
+				
+    <div id="nome_secao"><h3><strong>CONFIRMA&Ccedil;&Atilde;O DE E-MAIL CADASTRADO </strong></h3></div>
+
+    <div id="email_confirma" class="c_dados">
+        
+		<h2>Seu email foi confirmado com sucesso!</h2>
+    	
+		<h3 class="L txt_verde top25">Adicione produtos que voc&ecirc; usa e compartilhe informa&ccedil;&atilde;es:</h3>
+        <input name="dados_pessoais" type="button" class="bt_acao bgOpcoes top10 txt_14_666" value="adicionar produtos &agrave; minha lista" onclick="document.location='<?php echo $html->url('/') ?>produto/listar'"/>
+    
+		<h3 class="L txt_verde top25">Comece a seguir outros usu&aacute;rios e veja o que eles t&ecirc;m a dizer:</h3>
+        <input name="dados_pessoais" type="button" class="bt_acao bgOpcoes top10 txt_14_666" value="come&ccedil;ar a seguir outros usu&aacute;rios" onclick="document.location='<?php echo $html->url('/') ?>usuario/listar'"/>
+		
+    </div>
+    
+
+</div><!--fecha cont_secao-->

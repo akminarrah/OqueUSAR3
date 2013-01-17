@@ -1,0 +1,183 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+#topo_usu{height:auto;width:816px;float:left;}
+
+#L1{background:#FFF;height:auto;width:auto;float:left;position:relative;}
+
+#uDados{width:816px;float:left;}
+#uAcoes{background:#FFF;height:auto;width:auto;float:right;margin:5px 9px 10px 0;}
+#uAtalhos{height:auto;width:663px;float:right;}
+
+#t_uInfo{background:#F9F9F9;height:auto;width:633px;float:left;margin:0 0 10px 4px;padding:10px;}
+
+.bt_auto{height:17px;width:92px;margin:5px -1px 5px 0;padding:5px 0;float:left;text-align:center;position:relative;}
+
+#usuAvt{background:#FFF;height:130px;width:130px;float:left;margin:10px 10px 0 10px;}
+#usuAvt img{height:130px;width:130px;}
+
+.usu_info{height:20px;width:300px;float:left;margin:7px 0 0 3px;}
+#usuLocal.usu_info{margin:5px 0 5px 3px;}
+#usuInfo.usu_info{margin:0;}
+#usuRedes.usu_info{}
+#usuStatus{height:20px;width:20px;float:left;margin:112px 0 0 -38px;text-align:center;overflow:hidden;}
+#usuStatus img{height:20px;width:20px;}
+
+#status{background:none;height:30px;width:auto;float:left;margin:2px 5px 0 0;padding:5px 0;text-align:center;}
+#ptosPromo{background:none;height:30px;width:100%;float:left;margin:5px;padding:5px 0;text-align:center;}
+
+.btSubmitDetalhes{background:none;height:auto;widht:auto;border:none;padding:0;text-align:center;cursor:pointer;color:#0267B1;}
+
+
+
+#t_uOp{height:auto;width:auto;float:left;position:absolute;top:38px;right:9px;}
+#t_uOp ul{-webkit-padding-start:0;-webkit-padding-end:0;}
+#t_uOp ul li{background:#0CC;margin:5px 0;padding:5px 10px;display:block;}
+
+.box_atalho{background:#F9F9F9;height:auto;width:85px;float:left;margin:23px 10px 0 0;padding:10px 0;text-align:center;}
+.box_atalho h2{margin:10px 0 0 0;}
+
+#usu_atlz{background:#F9F9F9;height:auto;width:473px;float:left;margin:10px -4px 0 10px;border-right:solid 4px #FFF;}
+/*hack IE*/html>body #usu_atlz{width:508px;}
+
+#usu_atlzTit{height:35px;width:100%;float:left;}
+#usu_atlzTit h3{margin:10px 0 5px 10px;color:#0267B1;}
+.usu_atlzBox{height:auto;width:100%;float:left;border-top:solid 3px #FFF;}
+.usu_atlzAv{background:#CCC;height:25px;width:25px;float:left;margin:5px;}
+.usu_atlzAv img{height:25px;width:25px;}
+.usu_atlzI{height:auto;width:470px;float:left;margin:3px 0;word-wrap:break-word;}
+.usu_atlzI strong{color:#0267B1;}
+
+#UBP_contem{width:280px;float:right;margin:10px 7px 0 0;}
+/*hack IE*/html>body #UBP_contem{margin:10px 10px 0 0;}
+
+.usu_box_perfil{height:90px;width:306px;float:right;margin:-4px 0 10px 0;padding:0 0 5px 0;border-bottom:dashed 1px #CCC;}
+/*hack IE*/html>body .usu_box_perfil{height:80px;width:280px;}
+
+#u_b_t{height:auto;width:100%;float:left;margin:-3px 0 3px 0;color:#0267B1}
+.u_b_t1, .u_b_t2{background:none;width:auto;float:left;margin:0 0 0 5px;}
+.u_b_t2{float:right;margin:0 0px 0 0;}
+
+.u_b_pAv{height:50px;width:50px;float:left;margin:5px 3px 5px 3px;overflow:hidden;}
+
+.emails_convida{background:url(../img/base/emails.png) no-repeat right center #E1F1E7;height:50px;width:491px;float:left;border:solid 1px #CCC;margin:10px 0 0 10px;padding:0 0 0 15px;}
+.box_central{height:auto;width:506px;float:left;border:solid 1px #CCC;margin:10px 10px 0 10px;}
+
+/*****lista de amigos/usuários*****/
+
+#cont_listaUSUamigo{background:#FFF;height:auto;width:822px;float:left;border:none;margin:0;padding:0 10px;position:relative;}
+/*hack IE*/html>body #cont_listaUSUamigo{width:810px;padding:10px 0 10px 10px;}
+
+#cont_listaUSU{background:#FFF;height:auto;width:800px;float:left;border:solid 1px #6EC7C4;margin:10px;padding:10px;position:relative;}
+/*hack IE*/html>body #cont_listaUSU{width:810px;padding:10px 0 0 8px;}
+
+.p_bLt{background:#F9F9F9;height:auto;width:157px;float:right;margin:5px 0 0 0;}
+.p_bLt h3{display:block;margin:0 0 5px 5px;padding:5px 0 0 0;color:#0267B1;font-style:italic;font-size:12px;}
+.p_tImgs{height:30px;width:30px;float:left;margin:0 5px 5px 0;border:solid 1px #0CC;}
+
+.box_usu, .box_prc{background:#F9F9F9;height:auto;width:150px;float:left;margin:5px 8px 5px 0;position:relative;}
+.box_prc{margin:10px 0 0 10px;}
+/*hack IE*/html>body .box_usu{margin:5px 11px 5px 1px;}
+
+.b_i_u{width:150px;position:relative;}
+.b_i_u img.ico{position:absolute;top:24px;right:10px;}
+.b_i_u h4{height:auto;width:auto;margin:10px 10px 0 10px;font-size:12px;color:#0267B1;text-align:center;}
+.b_i_u_d{width:auto;float:left;margin:-10px 0 0 0;}
+.b_i_u_d h4{margin:3px 10px;font-size:11px;color:#0267B1;text-align:left;}
+
+.lst_avaUsu{height:130px;width:130px;float:left;margin:10px 10px 13px 10px;overflow:hidden;}
+.lst_avaUsu img{height:130px;width:130px;border:solid 1px #CCC;}
+
+.btGd3{width:128px;padding:5px 10px 5px 0;margin:3px 10px 10px 10px;}
+/*hack IE*/html>body .btGd3{width:118px;} 
+.lu_bt_acao{float:left;text-align:center;cursor:pointer;position:relative;}
+
+.b_i_u_op{background:#FFF;height:auto;width:128px;border:solid 1px #888;position:absolute;top:236px;right:10px;z-index:1000;}
+.b_i_u_op h4{margin:5px 10px;text-align:left;color:#666;}
+
+#b_filtro_usu{background:url(http://www.oqueusar.com.br/img/base/bg_widget.png) #fff;height:auto;width:782px;float:left;margin:5px 10px 10px 0;}
+/*hack IE*/html>body #b_filtro_usu{width:800px;}
+#b_filtro_usu h4{margin:2px 5px 0 5px;}
+.campo_busca{width:300px;margin:5px;}
+.campos_filtro{height:20px;width:auto;float:left;margin:5px;color:#666;font-size:11px;font-family:Verdana, Geneva, sans-serif;}
+#ordenar_usu{border-left:solid 5px #FFF;margin:0 0 0 5px;padding:0 0 0 5px;}
+
+
+/*****lista de necessaires*****/
+
+#cont_necess{background:#FFF;height:auto;width:822px;float:left;border:none;margin:0;padding:10px 5px 10px 17px;position:relative;}
+/*hack IE*/html>body #cont_necess{width:800px;padding:10px;}
+
+#necess_img{background:#F9F9F9;height:auto;width:630px;float:left;margin:5px 10px 0 0;position:relative;}
+
+#b_n_i{width:630px;float:left;}
+#b_n_ip{background:#F9F9F9;height:auto;width:610px;float:left;margin:10px;border:solid 1px #CCC;overflow:hidden;text-align:center;}
+
+.MC_mExibe2{background:#F9F9F9;height:auto;width:680px;float:left;margin:10px 0 0 10px;border:solid 1px #CCC;overflow:hidden;text-align:center;}
+
+.n_i_t{height:50px;width:50px;float:right;margin:9px 9px 1px 1px;border:solid 1px #CCC;overflow:hidden;}
+.ativa{margin:8px 8px 0 0;border:solid 2px #0267B1;overflow:hidden;}
+
+#MPm_Lista img{float:left;margin:1px 9px 9px 1px;border:solid 1px #CCC;overflow:hidden;}
+#MPm_Lista img.selected{float:left;margin:0 8px 8px 0;border:solid 2px #0267B1;overflow:hidden;}
+
+#n_nota{width:257px;float:left;margin:25px 0 0 10px;}
+.n_estrela img{margin:0 0 -4px 0;}
+
+#b_n_i h3, #b_n_i h4{width:610px;margin:5px 10px 10px 10px;}
+#n_prod ul{-webkit-padding-start:0;margin:0;}
+#n_prod ul li img{height:50px;margin:0 -5px 7px 10px;border:solid 1px #CCC;}
+
+#n_bCom_usu{background:/*url(http://www.oqueusar.com.br/img/base/dica.jpg) top right no-repeat*/ #F9F9F9;height:auto;width:628px;float:left;margin:10px 0 0 0;border:solid 1px #EBEBEB;}
+
+.bCom{width:460px;margin:0 0 7px 0;}
+
+.bCom_img, .bCom_icoImg{background:none;height:auto;width:32px;float:left;margin:2px 0px 0 5px;color:#18F;font-size:10px;}
+.bCom_img{margin:2px 10px 0 5px;}
+#bCom_resp .bCom_icoImg{float:right;margin:5px 0px 0 5px;}
+.bComR_img{width:22px;float:left;margin:5px 0;}
+.bCom_img img{margin:3px 0 0 0;border:solid 1px #666;}
+
+#bCom_img .bCom_icoImg img, #bCom_resp .bCom_icoImg img{margin:4px 0px -3px 0;border:none;}
+#bCom_acoes, #bCom_resp{background:#EBEBEB;height:auto;width:578px;float:right;margin:5px 0 3px 0;padding:0 5px 0 0;}
+#bCom_resp{height:32px;width:575px;margin:2px 0 0 0;padding:0 5px;} 
+#bCom_acoes{background:none;border-top:dashed 1px #CCC;}
+#bCom_acoes div{margin:3px 0 0 0;}
+#bCom_acoes img{margin:0 3px;}
+
+.bCom_info, .bCom_tit, .bCom_com{width:570px;margin:3px 10px 5px 0;}
+.bCom_tit, .bCom_com{margin:3px 10px 0 0;}
+.bComR_info{width:500px;margin:3px 5px -1px 5px;word-wrap:break-word;}
+
+#n_bComenta{background:#EBEBEB;height:62px;width:630px;float:left;margin:20px 0 10px 0;}
+#n_btCom{background:#C60;height:20px;width:auto;float:left;margin:10px 80px 10px 30px;padding:10px 30px 10px 30px;border:solid 1px #999;}
+#n_btCom h3{font-size:16px;color:#FFF;}
+.n_comInfo{height:auto;width:100px;float:left;margin:18px 0;padding:0 10px;text-align:center;border-right:solid 1px #666;}
+/*hack IE*/html>body .n_comInfo{width:80px;}
+
+#necess_sigo{height:auto;width:157px;float:left;margin:1px 0 0 0;clear:both;}
+#necess_sigo h3{margin:0 0 10px 0;}
+#necess_sigo ul{-webkit-padding-start:0;}
+#necess_sigo ul li{background:#FFF;height:100px;width:160px;margin:0 0 10px 0;display:list-item;}
+#necess_sigo ul li img{height:70px;width:70px;float:left;border:solid 1px #CCC;margin:0;overflow:hidden;text-align:center;}
+#necess_sigo ul li .n_s_avt{height:20px;width:20px;border:solid 1px #CCC;float:left;margin:3px 0 3px 3px;overflow:hidden;}
+
+#n_s_u_id{background:#F5F5F5;}
+#n_s_u_id h4{width:120px;float:left;margin:7px 0 5px 5px;word-wrap:break-word;font-size:11px;}
+
+#n_s_img h4{width:83px;float:left;margin:10px 0 5px 5px;word-wrap:break-word;font-size:11px;}
+#n_s_img span{margin:5px;word-wrap:break-word;}
+
+#m_necess ul{-webkit-padding-start:0;}
+#m_necess ul li{background:#FFF;height:72px;width:163px;padding:0;display:list-item;}
+#m_necess ul li h4{width:83px;float:left;margin:10px 0 5px 5px;word-wrap:break-word;font-size:11px;}
+#m_necess ul li img{float:left;border:solid 1px #CCC;margin:0;overflow:hidden;text-align:center;}
+#m_necess span{margin:5px;word-wrap:break-word;}
+
+
+/*****diversos*****/
+
+.25p{height:25px;width:25px;}
+.ico_hora{margin:3px 3px -1px 0;}
+.bt_p{margin:25px 0 0 60px;}
+.bt_add{margin:10px;}

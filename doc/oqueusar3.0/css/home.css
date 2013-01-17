@@ -1,0 +1,55 @@
+/* \\\\\ HOME ///// */
+
+#secao{background-color:#FFF;height:auto;width:958px;position:relative;float:left;overflow:hidden;border-width:0 1px 1px 1px;border-style:solid;border-color:#6EC7C4;margin:0 10px;padding:0 10px;}
+
+ul#DIR, ul#ESQ{width:600px;margin:0;padding:0;}
+ul#ESQ{width:358px;}
+
+#banner{height:170px;width:600px;float:left;margin:15px 0 0 0;}
+#col_centro{background:none;height:auto;width:905px;float:left;margin:-10px 0 0 10px;}
+
+#chama_home{background:#E1F1E7;height:auto;width:900px;float:left;border:dashed 1px #999;margin:15px 0 0 0;}
+#chama_home2{background:#F0FAF4;height:auto;width:324px;float:left;border:dashed 1px #999;margin:15px 0 0 10px;padding:10px;}
+#chama_home2 ul{-webkit-padding-start:15px;padding:0 0 0 15px;}
+
+#prod_destaq{background:#060;height:170px;width:285px;float:left;margin:15px 0 0 16px;}
+
+#busca_home{background:none;height:85px;width:580px;float:left;margin:5px 0 0 20px;padding:8px 0 0 0;}
+.busca_homeCampo{background-color:#E1F1E7;height:23px;width:510px;float:left;border:solid 1px #6EC7C4;margin:2px 0 0 0;padding:0 5px;font-style:italic;color:#666;}
+#busca_homeLupa{background:#537473;height:15px;width:15px;float:left;border:solid 1px #FFF;margin:1px 5px;padding:5px;cursor:pointer;}
+
+.chamaBtCA{height:20px;width:100px;float:left;text-align:center;margin:10px 0 5px 10px;padding:12px 15px 10px 15px;}
+
+.chamaBtCA a{background-color:none;text-decoration:none;color:#FFF;}
+.chamaBtCA a:link{text-decoration:none;color:#FFF;}
+.chamaBtCA a:visited{text-decoration:none;color:#FFF;}
+.chamaBtCA a:hover{background-color:none;text-decoration:none;color:#000;}
+.chamaBtCA a:active{text-decoration:none;color:#FFF;}
+.chamaBtCA a img{border:none;}
+
+#chama_prod{background:none;height:145px;width:575px;float:left;margin:14px 0 14px 10px;border:solid 1px #6EC7C4;}
+.chama_prodTumb{height:75px;width:75px;float:left;margin:10px 0 0 17px;}
+
+.bgCadastrar{background-color:#75c595;border:solid 1px #999;}
+.bgAcessar{background-color:#09F;border:solid 1px #999;}
+
+#chamaTxt{text-align:center;}
+#chamaTxt h2{text-transform:uppercase;font-size:13px;margin:10px 0;}
+#chamaTxt h3{font-weight:lighter;text-align:justify;margin:0 0 10px 0;}
+
+
+/* -------------- ABAS -------------- */
+
+#abas{height:1%;width:575px;float:left;display:table;margin:0 0 10px 1px;border-bottom:1px solid #6EC7C4;}
+#abas, #abas a{font-weight:bold;}
+#abas ul, #abas li{margin:0;padding:0;}
+#abas ul li{background:#E1F1E7;float:left;border:1px solid #6EC7C4;border-bottom:none;border-top:none;margin:0 0 -1px -1px;list-style:none;}
+#abas ul li a {float:left;display:block;padding:8px 24px;color:#066;text-decoration:none;cursor:pointer;}
+#abas ul li.on a, #abas ul li a:hover{background-color:#FFF;color:#000;}
+#abas ul li.on{border-bottom:1px solid #FFF;border-left: 1px solid white;margin-bottom:-1px;margin-left:-1px;}
+#abas li.ordem {float:right;border-color:#FFF;}
+
+
+/* -------------- REDES SOCIAIS EXTERNAS -------------- */
+
+#iframe_facebook, #iframe_twitter, #iframe_blogger{height:300px;width:auto;float:left;margin:15px 0 0 10px;}
